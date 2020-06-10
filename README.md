@@ -31,6 +31,6 @@ sudo chmod -R 777 storage/
 npm run prod
 ```
 
-## Developemtn Notes
+## Development Notes
 
 This repo contains basic Http controller methods for storage and retrieval, and wraps XHR in some middleware to check for existence of a header key, which the axios package is configured to provide by default. It adds a single component, i.e. `Form`, React front-end to provide browser controls to make calls to the registered api endpoints for storage and retrieval. The React component also provides basic output messaging, and conditional rendering of html elements using React component state.
