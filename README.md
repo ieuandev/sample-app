@@ -11,13 +11,14 @@ create database {databasename};
 3. Create a file called `.env` using contents frpm the `.env.example` file in root, then on the CLI run `php artisan key:generate` in the project root, and this should create the APP_KEY cipher in the `.env` file.
 4. Add the following key/value pairs referencing the database values from step 2 above:
 
+```sh
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE={databasename}
     DB_USERNAME={username}
     DB_PASSWORD={password}
-
+```
 5. install composer packages: `composer install`
 
 6. Then run the following in the project root directory to (1) install node dependencies, (2) create tables and seed mock 'PowerUnits' data into the database, (3) ensure correct permissions for Laravel to write to log files, and (4) ensure that Laravel's mix manifest (i.e. webpack lite) is built:
