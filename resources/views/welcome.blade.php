@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Sample UI</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -16,7 +16,6 @@
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
                 margin: 0;
             }
 
@@ -45,6 +44,7 @@
             }
 
             .title {
+                margin-top: 120px;
                 font-size: 84px;
             }
 
@@ -61,40 +61,65 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            form {
+                margin: 15px 0;
+            }
+
+            form select {
+                padding: 5px;
+                width: 190px;
+                margin: 10px 0;
+                font-size: 16px;
+                border: 1px solid #ccc;
+            }
+
+            form select:focus {
+                outline: 0 none;
+            }
+
+            button {
+                display: block;
+                margin: 15px auto auto;
+                padding: 8px 18px;
+                background: #333;
+                color: #fff;
+                font-family: sans-serif;
+                border-radius: 5px;
+                border: 1px solid #000;
+                min-width: 160px;
+            }
+            button:hover {
+                opacity: 0.75;
+                cursor: pointer;
+            }
+            label {
+                display: inline-block;
+                width: 150px;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+            input[type=text] {
+                width: 180px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                color: #666;
+                padding: 5px;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+        <div class="flex-center position-ref">
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Sample UI
                 </div>
+                <div id="powerUnitForm"></div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
         </div>
+        <script src="/js/app.js"></script>
     </body>
 </html>
